@@ -8,7 +8,7 @@ const { getConnection } = require('../../../data/connection'); // Importa a fun�
 passport.use(new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENT_ID,   // Id de cliente da API no Google Cloud Console
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,  // Informação secreta da API no Google Cloud Console
-  callbackURL: "/user/auth/google/callback" // URL de callback após autenticação
+  callbackURL: "https://restapi-vercel.onrender.com/user/auth/google/callback" // URL de callback após autenticação
 },
 async (accessToken, refreshToken, profile, done) => {
   try {
